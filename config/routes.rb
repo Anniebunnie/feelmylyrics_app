@@ -1,7 +1,14 @@
 FeelmylyricsApp::Application.routes.draw do
+  
   devise_for :users
 
   root :to => "home#index"
+
+  resources :profiles, only: [:index, :show]
+
+  resources :posts
+
+  resources :songs
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
