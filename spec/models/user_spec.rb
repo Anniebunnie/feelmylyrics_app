@@ -1,5 +1,12 @@
 require 'spec_helper'
 
 describe User do
-  pending "add some examples to (or delete) #{__FILE__}"
+	describe "add User to database" do 
+		before do 
+			@user = User.create(name: "Ann Kim")
+		end
+		it "will have stored a new user to database" do
+			@user.name.should == "Ann Kim"
+		end
+	end
 end
