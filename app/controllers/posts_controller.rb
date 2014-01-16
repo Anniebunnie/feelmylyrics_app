@@ -20,20 +20,20 @@ class PostsController < ApplicationController
 
 		@user = current_user
 
-		@post = Post.create!{
-			text = params[:my_feelings],
-			user_id = current_user.id,
-			artist = params[:artist],
-			title = params[:title]
-		}
+		@post = Post.create!({
+			text: params[:my_feelings],
+			user_id: current_user.id,
+			artist: params[:artist],
+			title: params[:title]
+		})
 
 		# direct_to => 'songs#index'
-		@song = Song.create!{
-			artist = params[:artist],
-			title = params[:title],
-			lyric = params[:lyrics] || params[:snippet]
-			post_id = params[:id]
-		}
+		@song = Song.create!({
+			artist: params[:artist],
+			title: params[:title],
+			lyric: params[:lyrics] || params[:snippet],
+			post_id: params[:id]
+		})
 
 
 	end

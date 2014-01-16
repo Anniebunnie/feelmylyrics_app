@@ -11,14 +11,14 @@
 		</tr>
 	</thead>
 	<tbody>
-		<% @posts.each do |c| %>
-		<tr>
-			<td><%= c.user.name %></td>
-			<td><%= c.text %></td>
-			<td><%= c.lyric %></td>
-			<td><%= c.song.title %></td>
-			<td><%= c.song.artist %></td>
-			<td><%= c.comments.comment %></td>
+		
+		<tr><% @posts.each do |p| %>
+			<td><%= p.user.name %></td>
+			<td><%= p.text %></td>
+			<td><%= p.lyric %></td>
+			<td><%= p.song.title %></td>
+			<td><%= p.song.artist %></td>
+			<td><%= p.comments.comment %></td>
 		</tr>
 		<% end %>
 	</tbody>
