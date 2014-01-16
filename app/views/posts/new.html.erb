@@ -1,1 +1,12 @@
-new.html.erb
+<div id="new-song">
+<form id="new_song" action="/songs" method="post">
+	<input type="text" name="text" id="new_post" maxlength="500" placeholder="Ya Feel Me?">
+	<input type="text" name="artist" id="artist" maxlength="90" placeholder="Artist">
+	<input type="text" name="title" id="track" maxlength="90" placeholder="track">
+	<button type="submit" id="submit-new"></button>
+	<input name="authenticity_token" 
+                  type="hidden" 
+                  value="<%= form_authenticity_token %>" />
+</form>
+</div>
+

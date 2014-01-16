@@ -3,9 +3,12 @@ class HomeController < ApplicationController
 
 def index
 
+sort_by = params[:sort_by] || 'id'
+
+@users = User.all
 @posts = Post.all
 @comments = Comment.all
-
+@songs = Song.all
 
 end
 end

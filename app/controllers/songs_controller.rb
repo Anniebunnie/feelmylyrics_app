@@ -1,40 +1,105 @@
 class SongsController < ApplicationController
 
-attr_accessible :artist, :title
+API_KEY = ENV['MUSIXMATCH_KEY']
 
-	def get_track_id(artist, title)
-	    @artist = params[:artist]
-	    @title = params[:title]
+	def index
+		#full lyrics
 
-	    url = "http://api.musixmatch.com/ws/1.1/track.search?apikey=#{APIKEY}&q_artist=#{ARTIST}&q_track=#{TRACK}format=json&page_size=1&f_has_lyrics=1"
-	    
-	    music = HTTParty.get(url)
-	    saved = JSON.parse(music)
 
-	    return saved["message"]["body"]["track_list"][0]["track"]["track_id"]
 
  	end
 
- 	def display_lyrics(track_id)
 
- 		@track_id = params[:track_id]
- 		url = http://api.musixmatch.com/ws/1.1/track.lyrics.get?#{APIKEY}&track_id=#{TRACKID}&format=json&page_size=1&f_has_lyrics=1
+ 	def new
+
+ 		
+ 	end
+
+ 	def create
+
+ 		@user = current_user
+ 		@user.name = current_user.name
+
+ 		
+
+ 		# display_lyrics(track_id)
+
+ 		@artist = params[:artist]
+	    @title = params[:title]
+	    @text = params[:text]
+
+	    puts @text
+
+	    url = "http://api.musixmatch.com/ws/1.1/track.search?apikey=#{ENV['MUSIXMATCH_KEY']}&q_artist=#{@artist}&q_track=#{@title}&format=json&page_size=1&f_has_lyrics=1"
+	    
+	    puts '*************'
+	    puts url
+	    puts '*************'
+
+	    music = HTTParty.get(url)
+	    saved = JSON.parse(music)
+
+	    @track_id = saved["message"]["body"]["track_list"][0]["track"]["track_id"]
+
+	   
+ 		url = "http://api.musixmatch.com/ws/1.1/track.lyrics.get?apikey=#{ENV['MUSIXMATCH_KEY']}&track_id=#{@track_id}&format=json&page_size=1&f_has_lyrics=1"
+
+		puts '*************'
+	    puts url
+	    puts '*************'
 
 		music = HTTParty.get(url)
 	    hash = JSON.parse(music)
 
-		return hash["message"]["body"]["lyrics"]["lyrics_body"]
+
+
+		@lyrics = hash["message"]["body"]["lyrics"]["lyrics_body"]
+
+
+		@song = Song.create{
+			title = @title,
+			artist = @artist,
+			verse = @lyrics
+		}
+
+		@post = User.find(@user.id).posts << Post.create{
+			song_id = @song.id,
+			lyric = @lyrics,
+			user_id = current_user.id,
+			text = @text
+		}
+
+
+		render :'posts/show'
  	end
 
- 	def get_snippet(track_id)
+
+
+
+ 	def edit
+
+ 		# get_snippet(track_id)
 
  		@track_id = params[:track_id]
 
- 		url = "http://api.musixmatch.com/ws/1.1/track.snippet.get?apikey=#{APIKEY}&track_id=#{TRACKID}format=json&page_size=1&f_has_lyrics=1"
+ 		url = "http://api.musixmatch.com/ws/1.1/track.snippet.get?apikey=#{ENV['MUSIXMATCH_KEY']}&track_id=#{@track_id}&format=json&page_size=1&f_has_lyrics=1"
 
  		music = HTTParty.get(url)
 	    saved = JSON.parse(music)
 
-		saved["message"]["body"]["snippet"]["snippet_body"]
+		@snippet = saved["message"]["body"]["snippet"]["snippet_body"]
+
+		redirect_to 'posts/:id/show'
+
 	end
+
+	def show
+
+		@songs = Song.all
+		@posts = Post.all
+		@users = User.all
+		#display all in a table
+	end
+
+
 end
