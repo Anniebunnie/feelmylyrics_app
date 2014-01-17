@@ -1,0 +1,8 @@
+<% if @user %>
+<div class= "new_comment">
+	<form action="/posts/<%=p.id%>/comments/new" method="post">
+		<textarea name="comment" id="comment" cols="79" rows="2"></textarea>
+		<input type="submit">
+	</form>
+</div>
+<% end %>

@@ -14,7 +14,7 @@ class CommentsController < ApplicationController
 
 		Comment.create!(comment: params[:comment], user_id: current_user.id, post_id: params[:id]) 
 
-		redirect '/'
+		redirect_to root_path
 		
 	end
 
