@@ -30,7 +30,6 @@ gem 'jquery-rails'
 gem 'rspec-rails'
 gem 'capybara'
 
-gem 'sanitize'
 gem 'skeleton-rails'
 
 # To use ActiveModel has_secure_password
