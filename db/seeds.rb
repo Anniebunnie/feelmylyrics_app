@@ -18,6 +18,7 @@
 User.destroy_all
 Post.destroy_all
 Comment.destroy_all
+Song.destroy_all
 
 #example 1
 
@@ -25,7 +26,8 @@ u1 = User.create!(name: "John", email: "john@example.com", password: "111111111"
 s1 = Song.create!({
 			title: "She loves me",
 			artist: "Beatles",
-			verse: "Yeah yeah yeahhhh"
+			verse: "Yeah yeah yeahhhh",
+			photo: "http://static.musixmatch.com/images/albums/4/0/2/7/8/9/25987204.jpg"
 		})
 p1 = Post.create!({
 			song_id: s1.id,
@@ -45,7 +47,8 @@ u2 = User.create!(name: "David", email: "david@example.com", password: "11111111
 s2 = Song.create!({
 			title: "Sometimes",
 			artist: "Britney Spears",
-			verse: "sometimes i run"
+			verse: "sometimes i run",
+			photo: "http://static.musixmatch.com/images/albums/4/0/2/7/8/9/25987204.jpg"
 		})
 p2 = Post.create!({
 			song_id: s2.id,
@@ -65,7 +68,8 @@ u3 = User.create!(name: "Christy", email: "christy@example.com", password: "1111
 s3 = Song.create!({
 			title: "Bohemian Rhapsody",
 			artist: "Queen",
-			verse: "mama, just killed a man..."
+			verse: "mama, just killed a man...",
+			photo: "http://static.musixmatch.com/images/albums/4/0/2/7/8/9/25987204.jpg"
 		})
 p3 = Post.create!({
 			song_id: s3.id,
@@ -84,7 +88,8 @@ u4 = User.create!(name: "Tina", email: "tina@example.com", password: "111111111"
 s4 = Song.create!({
 			title: "run",
 			artist: "snow patrol",
-			verse: "light up, light up"
+			verse: "light up, light up",
+			photo: "http://static.musixmatch.com/images/albums/4/0/2/7/8/9/25987204.jpg"
 		})
 p4 = Post.create!({
 			song_id: s4.id,

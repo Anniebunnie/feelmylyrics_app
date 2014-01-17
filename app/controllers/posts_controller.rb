@@ -1,10 +1,19 @@
 class PostsController < ApplicationController
 
+
 	def index
 		@posts = Post.all
 		@users = User.all
 		@comments = Comment.all
 		@songs = Song.all
+
+		@user = User.find(current_user.id)
+			post = @user.posts
+			comment = Comment.new(:comment => params[:comment])
+			comment.save 
+			post.comments << comment
+			user.comments << comment
+			redirect root_path
 	end
 
 	def new
@@ -20,8 +29,12 @@ class PostsController < ApplicationController
 
 		@user = current_user
 
+		@posts = @user.posts
+
+		@songs = @posts.songs
+
 		@post = Post.create!({
-			text: params[:my_feelings],
+			text: params[:text],
 			user_id: current_user.id,
 			artist: params[:artist],
 			title: params[:title]
@@ -31,7 +44,7 @@ class PostsController < ApplicationController
 		@song = Song.create!({
 			artist: params[:artist],
 			title: params[:title],
-			lyric: params[:lyrics] || params[:snippet],
+			lyric: params[:snippet],
 			post_id: params[:id]
 		})
 

@@ -1,0 +1,9 @@
+<div class='clear'></div>
+<% if @user %>
+<div class= "new_comment">
+	<form action="/posts/<%=post.id%>/comments" method="post">
+		<textarea name="comment_text" id="" cols="79" rows="2"></textarea>
+		<input type="submit">
+	</form>
+</div>
+<% end %>

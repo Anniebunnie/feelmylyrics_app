@@ -6,9 +6,15 @@ FeelmylyricsApp::Application.routes.draw do
 
   resources :profiles, only: [:index, :show]
 
-  resources :posts
+  resources :posts do
+    member do 
+    resources :comments 
+  end
+  end
 
   resources :songs
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

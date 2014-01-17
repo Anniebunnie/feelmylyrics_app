@@ -1,1 +1,35 @@
-index.html.erb
+<% if @user %>
+	<h1>Welcome, <a href="/users/<%=@user.id%>"><%=@user.name%></a></h1>
+	<a href="/users/sign_out">sign out</a>
+<% else %> 
+	<a href="/users/sign_up">sign up</a>
+	<a href="/users/sign_in">sign in</a>
+<% end %>
+
+<% if @user %>
+<form action="/posts" method="post">
+	<input type="text" name="title">
+	<textarea name="text" cols="70" rows="10"></textarea>
+	<input type="submit">
+</form>
+<hr>
+<% end %>
+
+<% @posts.each do |post| %> 
+	<div class="post">
+		</h1>
+			<p class="italics">User: <%= post.user.name %></p>
+			<p class="italics">Created at: <%= post.created_at.asctime %></p>
+		<div class= "text">
+			<%= post.text %>
+		</div>
+		<div class="comments">
+			<% post.comments.each do |comment| %> 
+				<p><%=comment.user.name%>: <%= comment.comment %></p>
+			<% end %>
+		</div>
+
+		
+		<% end %>
+	</div>
+<% end %>

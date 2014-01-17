@@ -1,0 +1,153 @@
+
+#header-content {
+	position: relative;
+	max-width: 800px;
+	margin: 0 auto;
+	float: left;
+	margin-top: 0px;
+}
+
+/*#logo{
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	left: 5px;
+	width: 200px;
+	height: 3800px;
+	background: url('/images/logo.jpg') 0 0 no-repeat;
+	text-indent: -9999px;
+	float:left;
+	clear: both;
+}
+*/
+.container{
+	text-align: center;
+	margin-top: 20px;
+}
+
+img{
+	border:2px solid;
+	border-radius:25px;
+}
+
+ul{
+	text-align: left;
+}
+
+ul li{
+	border-radius: 1em;
+	padding: .5em;
+}
+
+h1{
+	color: #ABBBCC;
+}
+
+h2{
+	color: #527599;
+}
+
+h3{
+	color: #EFFFFF;
+}
+
+h4{
+	color: #CCADAB;
+}
+
+body{
+	background:url('/images/cream_pixels.png');
+}
+
+.post {
+	background-color: #D9D1BO;
+	border-radius: 1em;
+	margin-top: 1em;
+	padding: 1em;
+	-moz-box-shadow: -1px 3px 12px #000000;
+	-webkit-box-shadow: -1px 3px 12px #000000;
+	box-shadow: -1px 3px 12px #000000;
+	z-index:3;
+       /* These three lines are for transparency in all browsers. */
+       -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+       filter: alpha(opacity=50);
+       opacity:.8;
+}
+
+.post .song {
+	color: #401B29;
+	background-color: #D9D1B0;
+	border-radius: 1em;
+	margin-top: 1em;
+	padding: 1em;
+	z-index:1;
+       /* These three lines are for transparency in all browsers. */
+       -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+       filter: alpha(opacity=50);
+       opacity:.7;
+}
+
+.new-post{
+	float: right;
+	clear: both;
+}
+
+.post h3 {
+	text-align: left;
+	color: ;
+}
+
+.post .new_comment {
+	background-color: light grey;
+}
+
+.comments p{
+	border-radius: 1em;
+	margin-top: 1em;
+	padding: 1em;
+	background-color: #DAEFF1;
+
+}
+
+.italics{
+	font-style:italic;
+}
+
+.song .italics{
+	color: #401B29;
+}
+
+.song h4{
+	color: #401B29;
+}
+
+.comments p:nth-child(even){
+	background-color: #DAEFF1;
+	color: #ABBBCC;
+	z-index:1;
+       /* These three lines are for transparency in all browsers. */
+       -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+       filter: alpha(opacity=50);
+       opacity:.2;
+}
+
+#new-post{
+	text-align: center;
+	position: center;
+	float: left;
+	clear: right;
+}
+
+title{
+	color: #CCADAB;
+}
+
+.links{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: calc(100% - 34px);
+	width: -webkit-calc(100% - 34px);
+	width: -moz-calc(100% - 34px);
+}
+

@@ -1,9 +1,10 @@
-<h1>SHOWING YOUR POST AND LYRICS</h1>
-<div>
-<h1><%= @user.name %></h1>
-<%= @user.email %>
-<%= @artist %>
-<%= @title %>
-<%= @snippet %>
 
 <div>
+<h1><%= @user.name %></h1>
+<img src="<%= @song.photo %>">
+<h4><%= @post.text %></h4>
+<h2><%= @song.artist %></h2>
+<h3><%= @song.title %></h3>
+<h4><%= @song.verse %></h4>
+
+</div>
