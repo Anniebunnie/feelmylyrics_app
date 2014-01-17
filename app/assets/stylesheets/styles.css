@@ -60,7 +60,7 @@ body{
 }
 
 .post {
-	background-color: #D9D1B0;
+	background-color: #DAEFF1;
 	border-radius: 1em;
 	margin-top: 1em;
 	padding: 1em;
@@ -109,9 +109,13 @@ body{
 	float: right;
 }
 
+.post h2{
+	font-style: bold;
+}
+
 .post h3 {
 	text-align: left;
-	color: #C0BE7A;
+	color: black;
 }
 
 .post .new_comment {
@@ -122,7 +126,7 @@ body{
 	border-radius: 1em;
 	margin-top: 1em;
 	padding: 1em;
-	background-color: #DAEFF1;
+	background-color: #F62B60;
 
 }
 

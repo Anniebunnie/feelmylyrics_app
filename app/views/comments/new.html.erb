@@ -1,8 +1,11 @@
-<% if @user %>
+
 <div class= "new_comment">
-	<form action="/posts/<%=p.id%>/comments/new" method="post">
+	<form action="/posts/<%=params[:id]%>/comments" method="post">
+		<label for="regularTextarea">Your Comment here:</label>
 		<textarea name="comment" id="comment" cols="79" rows="2"></textarea>
 		<input type="submit">
+		<input name="authenticity_token" 
+                  type="hidden" 
+                  value="<%= form_authenticity_token %>" />
 	</form>
 </div>
-<% end %>
