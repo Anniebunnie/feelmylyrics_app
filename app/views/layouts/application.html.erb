@@ -18,6 +18,7 @@
 	<div class="links">
 			<li>
 	<% if user_signed_in? %>
+	<%= link_to 'New_Post', new_post_path, method: :get %> 
 	<%= link_to 'Sign_Out', destroy_user_session_path, method: :delete %> 
 	<% else %>
 	<%= link_to "Sign In", new_user_session_path %>
