@@ -136,5 +136,14 @@ API_KEY = ENV['MUSIXMATCH_KEY']
 		#display all in a table
 	end
 
+	def destroy
+		song = Song.find(params[:id])
+		# posts = Post.where(song_id: params[:id])
+		# posts.update_all(song_id: nil)
+		song.delete
+
+		redirect_to root_path
+	end
+
 
 end

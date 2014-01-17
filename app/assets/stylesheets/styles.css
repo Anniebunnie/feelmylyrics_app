@@ -92,9 +92,26 @@ body{
 	clear: both;
 }
 
+.post .delete{
+	margin-top: 1em;
+	padding: 1em;
+}
+
+.song .delete{
+	margin-top: 1em;
+	padding: 1em;
+	float: right;
+}
+
+.post .delete{
+	margin-top: 1em;
+	padding: 1em;
+	float: right;
+}
+
 .post h3 {
 	text-align: left;
-	color: ;
+	color: #C0BE7A;
 }
 
 .post .new_comment {
