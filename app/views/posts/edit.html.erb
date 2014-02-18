@@ -1,1 +1,27 @@
-edit.html.erb
+
+<body>
+	<div class='clear'></div>
+	<div class="new-post">
+		<form id="edit_post" action="/songs/" method="post">
+			<label for="regularTextarea">Save or edit your post</label>
+			<textarea type="<%= @post.text %>" name="text" id="text" maxlength="1000"></textarea><br>
+			<label for="regularInput">Enter artist name here</label>
+			<input type="<%= @post.song.artist %>" name="artist" id="artist" maxlength="90" placeholder="Artist"><br>
+			<label for="regularInput">Enter your desired track title here</label>
+			<input type="<%= @post.song.title %>" name="title" id="track" maxlength="90" placeholder="track"><br>
+			<label for="selectList">Lyric Option</label>
+			<select id="selectList">
+				<option value="Option 1">Snippet</option>
+				<option value="Option 2">Lyrics</option>
+			</select>
+			<label for="regularTextarea">Save or edit your post</label>
+			<textarea type="<%= @post.lyric %>" name="text" id="text" maxlength="1000"></textarea><br>
+			<label for="regularTextarea">Save or edit your post</label>
+			<textarea type="<%= @post.text %>" name="text" id="text" maxlength="1000"></textarea><br>
+			<button type="submit" class="button">Fetch that lyric!</button>
+			<input name="authenticity_token" 
+			type="hidden" 
+			value="<%= form_authenticity_token %>" />
+		</form>
+	</div>
+</body>

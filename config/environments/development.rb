@@ -14,7 +14,19 @@ FeelmylyricsApp::Application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
+
+  #What email protical will you use?
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+    :authentication => :plain,
+    :address => "smtp.mailgun.org",
+    :port => 587,
+    :domain => "message-example-app.herokuapp.com",
+    :user_name => "postmaster@feelmylyrics.herokuapp.com",
+    :password => ENV['MAILGUN_PASSWORD']
+}
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log

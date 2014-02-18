@@ -3,11 +3,11 @@
 	<div class="new-post">
 <form id="new_song" action="/songs" method="post">
 	<label for="regularTextarea">Enter your emotions and/or thoughts here</label>
-	<textarea type="text" name="text" id="text" maxlength="500" placeholder="Ya Feel Me?"></textarea><br>
+	<textarea type="text" name="text" id="text" maxlength="1000" placeholder="Ya Feel Me?"></textarea><br>
 	<label for="regularInput">Enter artist name here</label>
-	<input type="text" name="artist" id="artist" maxlength="90" placeholder="Artist"><br>
+	<input type="text" name="artist" id="artist" maxlength="300" placeholder="Artist"><br>
 	<label for="regularInput">Enter your desired track title here</label>
-	<input type="text" name="title" id="track" maxlength="90" placeholder="track"><br>
+	<input type="text" name="title" id="track" maxlength="300" placeholder="track"><br>
 	<button type="submit" class="button">Fetch that lyric!</button>
 	<input name="authenticity_token" 
                   type="hidden" 

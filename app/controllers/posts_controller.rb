@@ -2,6 +2,7 @@ class PostsController < ApplicationController
 
 
 	def index
+	
 		@posts = Post.all
 		@users = User.all
 		@comments = Comment.all
@@ -22,6 +23,7 @@ class PostsController < ApplicationController
 	end
 
 	def edit
+		@post = Post.find(params[:id])
 		@songs = Song.all
 	end
 

@@ -1,23 +1,25 @@
 <h1>Hello <%= @user.name %>!</h1>
+<%= link_to 'Destroy', destroy_user_session_path, method: :delete %> 
+
 <%= @user.email %>
-
+<div class='clear'></div>
 <% @posts.each do |post| %>
-<div>
-	<h2><%= post.user %></h2>
-<h2><%= post.text %></h2>
-<h3><%= post.song.artist %></h3>
-<h3><%= post.song.title %></h3>
-<h3><%= post.song.lyric %></h3>
-<h4><%= post.comments.map {|comment| comment.comment}.join(", ") %></h4>
-<h5><%= post.commenters.map {|commenter| commenter.name}.join(", ") %></h5>
-</div>
-<% end %>
+<div class="post">
+	<h3><%= post.user.name %></h3>
+	<h2><%= post.text %></h2>
+	<div class="song">
+		<ul>
+			<li><h4>ARTIST: <%= post.song.artist %></h4><li>
+				<li><h4>TRACK: <%= post.song.title %></h4><li>
+				</ul>
+				<h1 class="italics">"<%= post.lyric %>"</h1>
+				<img class="album" src="<%= post.song.photo %>" alt="Album Cover">
+			</div>
+			<div class="comments">
+				<p><%= post.comments.first.user.name if post.comments.first %> commented :  <%= post.comments.first.comment if post.comments.first %></p>
+				<%= link_to 'Comment', new_comment_path(post), method: :get %> 
+			</div>
+		</div>
+		<% end %>
 
-<%= link_to 'Destroy', destroy_user_session_path, method: :delete %> 
 
-<%= link_to 'Destroy', destroy_user_session_path, method: :delete %> 
-
-<!-- 
-<h3><%= post.songs.map {|song| song.artist}.join(", ") %></h3>
-<h3><%= post.songs.map {|song| song.title}.join(", ") %></h3>
-<h3><%= post.songs.map {|song| song.lyric}.join(", ") %></h3> -->

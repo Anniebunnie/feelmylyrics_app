@@ -14,6 +14,11 @@ FeelmylyricsApp::Application.routes.draw do
 
   resources :songs
 
+  get '/mail' => "home#shoot_mail"
+
+
+
+
 
 
   # The priority is based upon order of creation:
