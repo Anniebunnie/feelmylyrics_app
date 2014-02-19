@@ -2,7 +2,7 @@
 <div class='clear'></div>
 		<% @posts.each do |p| %>
 			<div class="post">
-				<a href='/profiles/:id' ><h3><%= p.user.name %></h3></a>
+				<h3><%= p.user.name %></h3>
 				<%= button_to "Delete Post", {controller: "posts", action: 'destroy', id: p.id}, method: :delete, :class => "delete", data: { confirm: "Are you sure?" }  %>
 				<h2><%= p.text %></h2>
 			<% unless p.song == nil %>
