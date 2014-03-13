@@ -3,14 +3,14 @@
 <% @posts.each do |post| %>
 <div>
 	<%= link_to(@profile) do %>
-<h2><%= post.user.name %></h2><% end %>
-<h2><%= post.text %></h2>
-<h3><%= post.song.artist %></h3>
-<h3><%= post.song.title %></h3>
-<h3><%= post.song.verse %></h3>
-<div class="circular"><img src="<%= p.song.photo %>" alt="Album Cover"></div>
-<h4><%= post.comments.map {|comment| comment.comment}.join(", ") %></h4>
-<h5><%= post.commenters.map {|commenter| commenter.name}.join(", ") %></h5>
+	<h2><%= post.user.name %></h2><% end %>
+	<h2><%= post.text %></h2>
+	<h3><%= post.song.artist %></h3>
+	<h3><%= post.song.title %></h3>
+	<h3><%= post.song.verse %></h3>
+	<div class="circular"><img src="<%= p.song.photo %>" alt="Album Cover"></div>
+	<h4><%= post.comments.map {|comment| comment.comment}.join(", ") %></h4>
+	<h5><%= post.commenters.map {|commenter| commenter.name}.join(", ") %></h5>
 </div>
 
 <% end %>

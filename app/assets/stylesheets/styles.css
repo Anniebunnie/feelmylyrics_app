@@ -1,5 +1,40 @@
+.logo{
+	width:120px;
+	padding: .5em;
+	margin-left: 10em;
+}
 
-#header-content {
+
+.title{
+	position: absolute;
+	margin-left: 30em;
+	margin-top: 2em;
+}
+
+.feed{
+	text-align: center;
+	position:relative;
+	color:#5FFFFC;
+	background-color: #3227E7;
+	border:2px solid;
+	box-shadow: 7px 7px 5px #888888;
+	border-radius:25px;
+	margin:0;
+	font-family: 'Love Ya Like A Sister', cursive;
+}
+
+.post-title{
+	text-align: left; 
+	font-family: 'Love Ya Like A Sister', cursive;
+	color: #5FFFFC;
+}
+
+#title{
+	color: #3227E7;
+	font-family: 'Love Ya Like A Sister', cursive;
+}
+
+#logo {
 	position: relative;
 	max-width: 800px;
 	margin: 0 auto;
@@ -73,14 +108,14 @@ body{
 }
 
 .post {
-	background-color: #DAEFF1;
+	background-color: #32A9E7;
 	border-radius: 1em;
 	margin-top: 1em;
 	padding: 1em;
 }
 
 .post .song {
-	color: #401B29;
+	color: #9242FF;
 	background-color: #D9D1B0;
 	border-radius: 1em;
 	margin-top: 1em;
@@ -88,7 +123,8 @@ body{
 }
 
 .new-post{
-	float: right;
+	margin-right: 27em;
+	text-align: left;
 	clear: both;
 }
 
@@ -135,11 +171,11 @@ body{
 }
 
 .song .italics{
-	color: #401B29;
+	color: #9242FF;
 }
 
 .song h4{
-	color: #401B29;
+	color: #3227E7;
 }
 
 .comments p:nth-child(even){
@@ -168,12 +204,27 @@ title{
 	top: 0;
 	left: 78%;
 	margin: 3em;
-	width
+	color: blue;
+}
+
+.notice{
+text-align: center;
+}
+
+.alert{
+text-align: center;
 }
 
 .newpostlink{
 	position: absolute;
 	left: 70%;
+	margin: 3em;
+	top: 0;
+}
+
+.signinlink{
+	position: absolute;
+	left: 78%;
 	margin: 3em;
 	top: 0;
 }

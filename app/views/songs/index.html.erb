@@ -1,9 +1,9 @@
 <% if @user %>
-	<h1>Welcome, <a href="/users/<%=@user.id%>"><%=@user.name%></a></h1>
-	<a href="/users/sign_out">sign out</a>
+<h1>Welcome, <a href="/users/<%=@user.id%>"><%=@user.name%></a></h1>
+<a href="/users/sign_out">sign out</a>
 <% else %> 
-	<a href="/users/sign_up">sign up</a>
-	<a href="/users/sign_in">sign in</a>
+<a href="/users/sign_up">sign up</a>
+<a href="/users/sign_in">sign in</a>
 <% end %>
 
 <% if @user %>
@@ -16,20 +16,20 @@
 <% end %>
 
 <% @posts.each do |post| %> 
-	<div class="post">
-		</h1>
-			<p class="italics">User: <%= post.user.name %></p>
-			<p class="italics">Created at: <%= post.created_at.asctime %></p>
-		<div class= "text">
-			<%= post.text %>
-		</div>
-		<div class="comments">
-			<% post.comments.each do |comment| %> 
-				<p><%=comment.user.name%>: <%= comment.comment %></p>
-			<% end %>
-		</div>
+<div class="post">
+</h1>
+<p class="italics">User: <%= post.user.name %></p>
+<p class="italics">Created at: <%= post.created_at.asctime %></p>
+<div class= "text">
+	<%= post.text %>
+</div>
+<div class="comments">
+	<% post.comments.each do |comment| %> 
+	<p><%=comment.user.name%>: <%= comment.comment %></p>
+	<% end %>
+</div>
 
-		
-		<% end %>
-	</div>
+
+<% end %>
+</div>
 <% end %>

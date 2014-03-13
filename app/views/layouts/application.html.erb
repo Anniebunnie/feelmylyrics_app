@@ -6,42 +6,46 @@
 	<meta name="viewport" content="initial-scale=1">
 	<title>Feel My Lyrics</title>
 	<link href='http://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister' rel='stylesheet' type='text/css'>
-
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+	<%= stylesheet_link_tag    "application", :media => "all" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
 
 
+	<ul>	
+		<li>
+	<div id="logo">
+			<a href="/">
+				<div>
+					<img class="logo" src="/images/logo.jpg">
+				</div>
+			</a>
+	</div>
+	<div class="title"><h2 id="title">Your Lyrical Blogosphere</h2></div>
+	<div class="clear"></div>
+			<% if user_signed_in? %>
+			<%= button_to 'New Post', new_post_path , :method => :get, :class => "newpostlink" %> 
+			<%= button_to 'Sign Out', destroy_user_session_path , :method => :delete, :class => "signoutlink" %> 
+			<% else %>
+			<%= button_to "Sign In", new_user_session_path, :method => :get, :class => "signinlink"  %>
+			<% end %>
+		</li>
+	</ul>
 
-		<ul>
-			<li>
-	<% if user_signed_in? %>
-	<%= button_to 'New_Post', new_post_path , :method => :get, :class => "newpostlink" %> 
-	<%= button_to 'Sign_Out', destroy_user_session_path , :method => :delete, :class => "signoutlink" %> 
-	<% else %>
-	<%= button_to "Sign In", new_user_session_path %>
-	<% end %>
-</li>
-</ul>
+
 
 	<p class="notice"><%= notice %></p>
 	<p class="alert"><%= alert %></p>
 	
-<div class="container">
+	<div class="container">
+<br><br>
 
-		<div id="header-content">
-			<a href="/">
-				<div>
-					<img src="/images/logo.jpg">
-				</div>
-			</a>
-       		</form>
-		</div><!-- End header-content -->
+	<%= yield %>
 
-<div class='clear'></div>
-<%= yield %>
+
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </div>
 </body>
 </html>
