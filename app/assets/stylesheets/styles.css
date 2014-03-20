@@ -1,13 +1,13 @@
 .logo{
 	width:120px;
 	padding: .5em;
-	margin-left: 10em;
+	margin-left: 16em;
 }
 
 
 .title{
 	position: absolute;
-	margin-left: 30em;
+	margin-left: 35em;
 	margin-top: 2em;
 }
 
@@ -116,7 +116,7 @@ body{
 
 .post .song {
 	color: #9242FF;
-	background-color: #D9D1B0;
+	background-color: white;
 	border-radius: 1em;
 	margin-top: 1em;
 	padding: 1em;
@@ -159,6 +159,7 @@ body{
 }
 
 .comments p{
+	color: black;
 	border-radius: 1em;
 	margin-top: 1em;
 	padding: 1em;
@@ -202,7 +203,7 @@ title{
 .signoutlink{
 	position: absolute;
 	top: 0;
-	left: 78%;
+	left: 76%;
 	margin: 3em;
 	color: blue;
 }
@@ -225,7 +226,7 @@ text-align: center;
 .signinlink{
 	position: absolute;
 	left: 78%;
-	margin: 3em;
+	margin: 2em;
 	top: 0;
 }
 
