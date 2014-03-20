@@ -31,6 +31,8 @@ gem 'rspec-rails'
 gem 'capybara'
 
 gem 'skeleton-rails'
+gem 'heroku-toolbelt'
+gem 'rest-client'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

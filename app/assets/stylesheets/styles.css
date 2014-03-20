@@ -1,13 +1,13 @@
 .logo{
 	width:120px;
 	padding: .5em;
-	margin-left: 16em;
+	margin-left: 13em;
 }
 
 
 .title{
 	position: absolute;
-	margin-left: 35em;
+	margin-left: 30em;
 	margin-top: 2em;
 }
 
@@ -203,7 +203,7 @@ title{
 .signoutlink{
 	position: absolute;
 	top: 0;
-	left: 76%;
+	left: 77.5%;
 	margin: 3em;
 	color: blue;
 }
@@ -218,7 +218,7 @@ text-align: center;
 
 .newpostlink{
 	position: absolute;
-	left: 70%;
+	left: 71%;
 	margin: 3em;
 	top: 0;
 }
