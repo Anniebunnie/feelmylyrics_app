@@ -18,6 +18,7 @@
  *= require base
  *= require layout
  *= require skeleton
+ *= require styles.css
  */
 
 
