@@ -1,15 +1,53 @@
+.nav_bar {
+background: #AAF0D1;
+height: 45px;
+width: 100%;
+position: fixed;
+opacity: 1;
+z-index: 1;
+top:0px;
+border-bottom: 1px solid #3227E7 .7;
+box-shadow: 1px 1px 2px #888888;
+font-weight: 400;
+}
+
+#title{
+	margin-left: 2em;
+	top:10px;
+	color:purple;
+	font-weight: 500;
+}
+
+#title:hover{
+	color:red;
+}
+
+#menu {
+float: right;
+margin-top: -25px;
+position: absolute;
+right: 0;
+margin-right: 10em;
+top:22px;
+}
+
+ul.menu {
+  list-style: none; 
+  margin: 0 0 2em;
+  padding: 0;
+}
+
+ul.menu li {
+  display: inline-block;  
+}
+
+
 .logo{
 	width:120px;
 	padding: .5em;
 	margin-left: 13em;
 }
 
-
-.title{
-	position: absolute;
-	margin-left: 30em;
-	margin-top: 2em;
-}
 
 .feed{
 	text-align: center;
@@ -200,13 +238,7 @@ title{
 	color: #CCADAB;
 }
 
-.signoutlink{
-	position: absolute;
-	top: 0;
-	left: 77.5%;
-	margin: 3em;
-	color: blue;
-}
+
 
 .notice{
 text-align: center;
@@ -216,18 +248,5 @@ text-align: center;
 text-align: center;
 }
 
-.newpostlink{
-	position: absolute;
-	left: 71%;
-	margin: 3em;
-	top: 0;
-}
-
-.signinlink{
-	position: absolute;
-	left: 78%;
-	margin: 2em;
-	top: 0;
-}
 
 
