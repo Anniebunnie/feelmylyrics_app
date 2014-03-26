@@ -1,6 +1,6 @@
 .nav_bar {
-background: #F5F5F5;
-height: 45px;
+background:url('/images/cream_pixels.png');
+height: 50px;
 width: 100%;
 position: fixed;
 opacity: 1;
@@ -18,6 +18,13 @@ font-weight: 400;
 	font-weight: 500;
 }
 
+#title a{
+	margin-top: -1em;
+	margin-left: 17%;
+	padding: .5em;
+	border-radius: 1px solid;
+}
+
 #title:hover{
 	color:red;
 }
@@ -27,7 +34,7 @@ float: right;
 margin-top: -25px;
 position: absolute;
 right: 0;
-margin-right: 10em;
+margin-right: 20%;
 top:22px;
 }
 
@@ -142,7 +149,7 @@ h4{
 }
 
 body{
-	background:url('/images/cream_pixels.png');
+	background-color: #fffafa;
 }
 
 .post {
